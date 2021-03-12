@@ -1,6 +1,13 @@
 spring:
   application:
     name: servicio-gateway-server
+  cloud:
+    gateway:
+      routes:
+      - id: usuarios
+        uri: lb://servicio-usuarios
+        predicate:
+        - Path=/usuarios/**     
 server:
   port: ${PORT:0}
 eureka:
