@@ -15,6 +15,6 @@ spring:
     gateway:
       routes:
       - id: SERVICIO-USUARIOS
-        uri: lb://servicio-usuarios
+        uri: lb://SERVICIO-USUARIOS
         predicates:
-        - Path=/usuarios/**
+        - Path=/api/usuarios/**
