@@ -18,17 +18,3 @@ spring:
         uri: lb://SERVICIO-USUARIOS
         predicates:
         - Path=/api/usuarios/**
-spring:
-  application:
-    name: gateway-service
-  cloud:
-    gateway:
-      routes:
-      - id: employeeModule
-        uri: lb://FIRST-SERVICE
-        predicates:
-        - Path=/employee/**
-      - id: consumerModule
-        uri: lb://SECOND-SERVICE
-        predicates:
-        - Path=/consumer/**
