@@ -4,12 +4,12 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: usuarios
+      - id: usuariosModule
         uri: lb://servicio-usuarios
         predicates:
-        - Path=/usuarios/**
+        - Path=/api/usuarios/**
 server:
-  port: ${PORT:0}
+  port: 8091
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
