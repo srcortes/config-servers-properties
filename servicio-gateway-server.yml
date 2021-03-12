@@ -1,6 +1,6 @@
 spring:
   application:
-    name : servicio-gateway-server
+    name: servicio-gateway-server
 
 server:
    port: ${PORT:0}
