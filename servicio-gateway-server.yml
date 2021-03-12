@@ -1,3 +1,13 @@
+server:
+  port: 8091
+
+eureka:
+    instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    client:
+      service-url:
+            defaultZone: http://localhost:8761/eureka
+
 spring:
   application:
     name: servicio-gateway-server
@@ -8,11 +18,3 @@ spring:
         uri: lb://servicio-usuarios
         predicates:
         - Path=/api/usuarios/**
-server:
-  port: 8091
-eureka:
-  instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-  client:
-    service-url:
-          defaultZone: http://localhost:8761/eureka
