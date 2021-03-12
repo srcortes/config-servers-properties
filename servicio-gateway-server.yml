@@ -6,8 +6,8 @@ spring:
       routes:
       - id: usuarios
         uri: lb://servicio-usuarios
-        predicate:
-        - Path=/usuarios/**     
+        predicates:
+        - Path=/usuarios/**
 server:
   port: ${PORT:0}
 eureka:
