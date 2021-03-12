@@ -14,7 +14,7 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: servicio-usuarios
+      - id: SERVICIO-USUARIOS
         uri: lb://servicio-usuarios
         predicates:
         - Path=/usuarios/**
